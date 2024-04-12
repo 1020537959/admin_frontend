@@ -247,6 +247,22 @@ export const constantRoutes: RouteRecordRaw[] = [
         }
       }
     ]
+  },
+  {
+    path: "/user",
+    component: Layouts,
+    redirect: "/user/index",
+    children: [
+      {
+        path: "index",
+        component: () => import("@/views/user/index.vue"),
+        name: "User",
+        meta: {
+          title: "用户管理",
+          elIcon: "UserFilled"
+        }
+      }
+    ]
   }
 ]
 
